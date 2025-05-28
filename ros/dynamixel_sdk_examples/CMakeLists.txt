@@ -18,16 +18,12 @@ find_package(dynamixel_sdk_custom_interfaces REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rclpy REQUIRED)
 
-include_directories(
-  include
-  ${dynamixel_sdk_INCLUDE_DIRS}
-  ${dynamixel_sdk_INCLUDE_DIRS}/dynamixel_sdk
-)
+include_directories(include)
 
 # Build
 add_executable(read_write_node src/read_write_node.cpp)
 target_link_libraries(read_write_node PUBLIC
-  ${dynamixel_sdk_TARGETS}
+  dynamixel_sdk::dynamixel_sdk
   ${dynamixel_sdk_custom_interfaces_TARGETS}
   rclcpp::rclcpp
 )

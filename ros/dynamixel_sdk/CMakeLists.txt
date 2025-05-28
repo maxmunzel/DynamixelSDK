@@ -70,6 +70,7 @@ install(
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
 )
 
 ################################################################################
@@ -80,6 +81,5 @@ ament_python_install_package(${PROJECT_NAME} PACKAGE_DIR "src/dynamixel_sdk")
 ################################################################################
 # Macro for ament package
 ################################################################################
-ament_export_include_directories(include)
 ament_export_targets(${PROJECT_NAME} HAS_LIBRARY_TARGET)
 ament_package()
