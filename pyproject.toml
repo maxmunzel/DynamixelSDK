@@ -1,0 +1,20 @@
+[project]
+name = "dynamixel_sdk"
+version = "3.8.4"
+description = "Pip-installable Version of the Dynamixel SDK"
+authors = [
+    {name='Leon Jung', email = 'rwjung@robotis.com'},
+    {name='Wonho Yun', email = 'ywh@robotis.com'},
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pyserial",
+]
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["uv_build>=0.8.13,<0.9.0"]
+build-backend = "uv_build"
